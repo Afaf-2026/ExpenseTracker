@@ -1,4 +1,6 @@
 def main():
+    expenses =[]
+   
     print("Expense Tracker")
     print("1. Add expense")
     print("2. View expenses")
@@ -11,6 +13,9 @@ def main():
           amount = input("Enter amount: ")
           category = input("Enter category: ")
           description = input("Enter description: ")
+
+          expense = [date, amount, category, description]
+          expenses.append(expense)
 
           print("Expense added")
           
