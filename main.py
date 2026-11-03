@@ -1,3 +1,5 @@
+from file_manager import save_expenses
+
 def main():
     expenses =[]
    
@@ -16,7 +18,7 @@ def main():
           # store the expense in the list
           expense = [date, amount, category, description]
           expenses.append(expense)
-
+          save_expenses(expenses)
           print("Expense added")
     elif choice == "2":
           # show all expenses
