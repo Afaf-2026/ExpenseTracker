@@ -13,11 +13,15 @@ def main():
           amount = input("Enter amount: ")
           category = input("Enter category: ")
           description = input("Enter description: ")
-
+          # store the expense in the list
           expense = [date, amount, category, description]
           expenses.append(expense)
 
           print("Expense added")
+    elif choice == "2":
+          # show all expenses
+          for expense in expenses:
+                print(expense)
           
 if __name__== "__main__":
         main()
