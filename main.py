@@ -1,7 +1,7 @@
-from file_manager import save_expenses
+from file_manager import save_expenses, load_expenses
 
 def main():
-    expenses =[]
+    expenses = load_expenses()
    
     print("Expense Tracker")
     print("1. Add expense")
