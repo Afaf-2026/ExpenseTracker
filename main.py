@@ -6,7 +6,8 @@ def main():
     print("Expense Tracker")
     print("1. Add expense")
     print("2. View expenses")
-    print("3. Exit")
+    print("3. Filter by category")
+    print("4. Exit")
 
     choice = input("Enter your choice: ")
     print("You chose:", choice)
@@ -24,7 +25,13 @@ def main():
           # show all expenses
           for expense in expenses:
                 print(expense)
-          
+    elif choice == "3":
+     # filter expenses by category
+     category = input("Enter category: ")
+
+     for expense in expenses:
+         if expense[2].lower()  == category.lower():
+               print(expense)
 if __name__== "__main__":
         main()
 
