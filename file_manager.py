@@ -1,4 +1,5 @@
 import json
+import csv
 
 # save expenses to a JSON file
 def save_expenses(expenses):
@@ -13,4 +14,10 @@ def load_expenses():
             return json.load(file)
     except FileNotFoundError:
         return []    
+    # export expenses to a CSV file
+    def export_csv(expenses):
+        with open("expenses.csv", "w", newline="") as file:
+            writer = csv.writer(file)
+            writer.writerow(["Date", "Amount", "Category", "Description"])
+            writer.writerows(expenses)
 
