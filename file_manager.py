@@ -15,7 +15,7 @@ def load_expenses():
     except FileNotFoundError:
         return []    
     # export expenses to a CSV file
-    def export_csv(expenses):
+def export_csv(expenses):
         with open("expenses.csv", "w", newline="") as file:
             writer = csv.writer(file)
             writer.writerow(["Date", "Amount", "Category", "Description"])

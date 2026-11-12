@@ -1,4 +1,4 @@
-from file_manager import save_expenses, load_expenses
+from file_manager import save_expenses, load_expenses, export_csv
 from datetime import datetime
 
 def main():
@@ -8,8 +8,9 @@ def main():
     print("1. Add expense")
     print("2. View expenses")
     print("3. Filter by category")
-    print("4. Filter by data")
-    print("5. Exit")
+    print("4. Filter by date")
+    print("5. Export to CSV")
+    print("6. Exit")
 
     choice = input("Enter your choice: ")
     print("You chose:", choice)
@@ -47,6 +48,12 @@ def main():
 
               if start <= expense_date <= end:
                    print(expense)
+    elif choice == "5":
+         export_csv(expenses)     
+         print("Expenses exported to CSV")
+
+    elif choice == "6":
+         print("Goodbye")            
                          
 if __name__== "__main__":
         main()
